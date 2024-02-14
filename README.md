@@ -54,7 +54,4 @@ $ sudo docker start lb
 
 ## Result
 - http://localhost:9090
-![image](https://github.com/minu1215/docker-nginx-vhost/assets/44054359/b846d928-76df-4436-8ffd-4c4999df074d)
-![image](https://github.com/minu1215/docker-nginx-vhost/assets/44054359/dd8e9335-8eda-4625-9627-56d99cfcc962)
-
 
