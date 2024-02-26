@@ -1,5 +1,5 @@
 # docker-nginx-vhost
-![2024-02-26 12-33-24](https://github.com/minu1215/docker-nginx-vhost/assets/44054359/4fb2daa3-704d-49c0-99d5-fe102d1f5b16)
+![2024-02-26 12-45-39 (1)](https://github.com/minu1215/docker-nginx-vhost/assets/44054359/7889bd4e-a334-4ab7-8fcc-389296852e88)
 
 ## Directory tree
 
