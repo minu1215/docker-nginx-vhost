@@ -6,65 +6,15 @@
 
 ```
 $ tree
-tree
-.
-├── README.md
-├── lb
-│   ├── Dockerfile
-│   └── config
-│       └── default.conf
-├── nginx
-│   └── Dockerfile
-├── serv-a
-│   ├── Dockerfile
-│   └── index.html
-└── serv-b
-    ├── Dockerfile
-    └── index.html
-```
-
-## Build
-- lb
-```
-$ sudo docker build -t lb lb/.
-```
-- serv-a
-```
-$ sudo docker build -t n-s-1 serv-a/.
-```
-- serv-b
-```
-$ sudo docker build -t n-s-2 serv-b/.
-```
-
-## Run
-```
-# Run lb, serv-a, serv-b
-$ sudo docker run -d -p 9090:80 --name lb lb
-$ sudo docker run -d --name serv-a n-s-1
-$ sudo docker run -d --name serv-b n-s-2
-
-# Create network & Connect
-$ sudo docker network create nginx-lb
-$ sudo docker network connect nginx-lb lb
-$ sudo docker network connect nginx-lb serv-a
-$ sudo docker network connect nginx-lb serv-b
-```
-
-## Directory tree
-```
-$ tree
 .
 ├── README.md
 ├── blog-a
 │   ├── Dockerfile
 │   ├── blog-pull-cronjob
-│   ├── fly.toml
 │   └── pull.sh
 ├── blog-b
 │   ├── Dockerfile
 │   ├── blog-pull-cronjob
-│   ├── fly.toml
 │   └── pull.sh
 ├── lb
 │   ├── Dockerfile
@@ -78,38 +28,6 @@ $ tree
 └── serv-b
     ├── Dockerfile
     └── index.html
-```
-
-## Build
-- lb
-```
-$ sudo docker build -t lb lb/.
-```
-- serv-a
-```
-$ sudo docker build -t n-s-1 serv-a/.
-```
-- serv-b
-```
-$ sudo docker build -t n-s-2 serv-b/.
-```
-
-## Run
-```
-# Run lb, serv-a, serv-b
-$ sudo docker run -d -p 9090:80 --name lb lb
-$ sudo docker run -d --name serv-a n-s-1
-$ sudo docker run -d --name serv-b n-s-2
-
-# Create network & Connect
-$ sudo docker network create nginx-lb
-$ sudo docker network connect nginx-lb lb
-$ sudo docker network connect nginx-lb serv-a
-$ sudo docker network connect nginx-lb serv-b
-
->>>>>>> main
-# Restart lb
-$ sudo docker start lb
 ```
 
 ## Routing
